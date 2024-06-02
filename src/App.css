@@ -1,0 +1,16 @@
+.arrow {
+  position: relative;
+  width: 150px; /* Adjust the length of the arrow line */
+  height: 2px; /* Adjust the thickness of the arrow line */
+  background-color: magenta; /* Adjust the color */
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: -6px; /* Center the arrowhead */
+  right: -10px; /* Position the arrowhead at the end */
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent magenta; /* Adjust the color */
+}
