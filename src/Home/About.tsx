@@ -23,8 +23,11 @@ const About = () => {
             Educational Qualification
           </h1>
           <p className="">
-            <span className="font-bold"> Brac University</span> — B.Sc. in
-            Computer Science & Engineering (CSE).
+            <span className="font-bold">
+              {" "}
+              Daffodil International University-DIU
+            </span>{" "}
+            — B.Sc. in Computer Science & Engineering (CSE).
           </p>
           <p className="py-3">
             <span className="font-bold">Feni Govt. College</span> - Higher
