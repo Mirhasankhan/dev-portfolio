@@ -1,10 +1,10 @@
 import "../App.css";
 
 const Contact = () => {
-  const handleMessageSend = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    form.reset();
+  const handleMessageSend = () => {
+    // e.preventDefault();
+    // const form = e.target;
+    // form.reset();
     alert("email send successfully");
   };
 
