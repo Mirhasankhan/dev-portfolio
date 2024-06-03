@@ -1,39 +1,45 @@
-import boot from "../assets/about.jpeg";
-import boot1 from "../assets/about.jpeg";
-import boot2 from "../assets/about.jpeg";
-import boot3 from "../assets/about.jpeg";
-import boot4 from "../assets/about.jpeg";
-import boot6 from "../assets/about.jpeg";
-import boot7 from "../assets/about.jpeg";
+import { useEffect, useState } from "react";
+import "../App.css";
+
+type TSkill = {
+  _id: string;
+  skillName: string;
+  image: string;
+};
 
 const Skills = () => {
+  const [skills, setSkills] = useState([]);
+  console.log(skills);
+  useEffect(() => {
+    fetch("https://portfolio-server-rosy-mu.vercel.app/api/v1/skills")
+      .then((res) => res.json())
+      .then((data) => {
+        setSkills(data);
+      });
+  }, []);
   return (
-    <div className="mx-16 mt-24">
-      <h1 className="text-2xl font-bold text-white mb-12">Skills</h1>
+    <div className=" mt-24">
+      <div className="flex flex-col items-center my-12">
+        <div className="flex items-center text-4xl font-bold text-white">
+          <div className="arrow ml-4"></div>
+          <span className="ml-4">My skills</span>
+        </div>
+      </div>
       <div
-        className="grid grid-cols-4 gap-8 mx-24"
+        className="grid grid-cols-4 gap-8 "
         data-aos="fade-right"
         data-aos-duration="1500"
       >
-        <div>
-          <img className="w-24 h-24 rounded-full mb-6" src={boot1} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot2} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot4} alt="" />
-        </div>
-        <div>
-          <img className="w-24 h-24 rounded-full mb-6" src={boot3} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot4} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot6} alt="" />
-        </div>
-        <div>
-          <img className="w-24 h-24 rounded-full mb-6" src={boot1} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot4} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot2} alt="" />
-        </div>
-        <div>
-          <img className="w-24 h-24 rounded-full mb-6" src={boot} alt="" />
-          <img className="w-24 h-24 rounded-full mb-6" src={boot7} alt="" />
-        </div>
+        {skills?.map((skill: TSkill) => (
+          <div key={skill._id} className="flex flex-col items-center">
+            <img
+              className="w-32 h-32 rounded-full mb-6"
+              src={skill.image}
+              alt=""
+            />
+            <p className="text-white">{skill.skillName}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

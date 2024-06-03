@@ -13,10 +13,7 @@ const Contact = () => {
       <h1 className="text-6xl font-semibold py-4 text-center text-white">
         Contact Me
       </h1>
-      <div className="flex items-center text-4xl font-bold text-white">
-        <span>My skills</span>
-        <div className="arrow ml-4"></div>
-      </div>
+
       <form onSubmit={handleMessageSend} className="card-body  rounded-md mt-4">
         <div className="form-control">
           <label className="label">

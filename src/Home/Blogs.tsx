@@ -16,8 +16,7 @@ const Blogs = () => {
             manipulation.
           </p>
           <a href="https://with.zonayed.me/tag/javascript/" target="_blank">
-            {" "}
-            <button className="resourse-button">Resource</button>
+            <button className="custom-button">Resource</button>
           </a>
         </div>
         <div className="bg-[#033E48] p-3 rounded-lg flex flex-col justify-center items-center">
@@ -33,7 +32,7 @@ const Blogs = () => {
             target="_blank"
           >
             {" "}
-            <button className="resourse-button">Resource</button>
+            <button className="custom-button">Resource</button>
           </a>
         </div>
         <div className="bg-[#033E48] p-3 rounded-lg flex flex-col justify-center items-center">
@@ -48,8 +47,7 @@ const Blogs = () => {
             href="https://hashdork.com/bn/%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF-%E0%A6%AA%E0%A6%B0%E0%A6%AC%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A7%80-js-%E0%A6%9F%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A7%8B%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2/"
             target="_blank"
           >
-            {" "}
-            <button className="resourse-button">Resource</button>
+            <button className="custom-button">Resource</button>
           </a>
         </div>
       </div>
