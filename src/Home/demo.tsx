@@ -5,13 +5,14 @@ import Blogs from "./Blogs";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
+import DownloadResume from "../components/DownloadResume";
 
 const App = () => {
   return (
     <>
       <div>
-        <div className="flex justify-between items-center border p-2 px-5 rounded-full text-white">
-          <h1 className="font-medium text-xl">Mir Hasan</h1>
+        <div className="bg-black bg-opacity-40 flex justify-between items-center border p-2 px-5 rounded-full text-white">
+          <h1 className="font-extrabold text-2xl">Mir Hasan</h1>
           <div>
             <ul className="p-4 flex w-full h-full gap-6  font-medium">
               <li>
@@ -64,20 +65,19 @@ const App = () => {
                   Skills
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={1000}
+                  className="link-logo"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
-          <ul>
-            <li>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={1000}
-                className="link-logo"
-              >
-                <button className="custom-button">Contact Me</button>
-              </Link>
-            </li>
-          </ul>
+          <DownloadResume></DownloadResume>
         </div>
         <div>
           <div id="home">
@@ -86,14 +86,15 @@ const App = () => {
           <div id="about">
             <About></About>
           </div>
-          <div id="blogs">
-            <Blogs></Blogs>
-          </div>
+
           <div id="portfolio">
             <Portfolio></Portfolio>
           </div>
           <div id="skill">
             <Skills></Skills>
+          </div>
+          <div id="blogs">
+            <Blogs></Blogs>
           </div>
 
           <div id="contact">

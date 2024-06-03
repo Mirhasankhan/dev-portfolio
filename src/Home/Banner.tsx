@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div className="text-white grid grid-cols-2 gap-5 my-24 px-6">
       <div className="mt-5">
-        <h1 className="text-2xl font-semibold">Hello, It's Me</h1>
+        <h1 className="text-2xl font-semibold">Hello, I'm</h1>
         <h1 className="text-7xl bold py-4">Mir Hasan</h1>
         <p className="text-3xl">
           I'm a <span className="text-cyan-400">Frontend Developer</span>

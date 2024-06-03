@@ -1,40 +1,40 @@
-import { Link } from "react-scroll";
-import aboutImg from "../assets/about.jpeg";
-
 const About = () => {
   return (
-    <div className="grid grid-cols-2 gap-5 px-6">
-      <img
-        className=" h-[400px] w-[400px]  rounded-full"
-        src={aboutImg}
-        alt=""
-      />
-      <div className="text-white">
-        <h1 className="text-4xl font-bold">About Me</h1>
-        <h2 className="text-2xl font-medium text-cyan-400 py-4">
-          MERN Stack Developer
-        </h2>
-        <p>
-          My journey in web development began with a curiosity for coding and a
-          desire to bring ideas to life on the internet. Over the years, I have
-          honed my skills in front-end and back-end development, mastering
-          languages such as HTML, CSS, JavaScript,React,Nodejs,ExpressJs.
-          Additionally, I am currently pursuing a Bachelor of Technology(B.Tech)
-          in Computer Science & Engineering from Haldia Institute Of
-          Technology(WestBengal,India).
-        </p>
-        <ul>
-          <li>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={1000}
-              className="link-logo"
-            >
-              <button className="custom-button mt-4">Contact Me</button>
-            </Link>
-          </li>
-        </ul>
+    <div>
+      <h1 className="text-5xl text-white pb-6 font-bold text-center">
+        About Me
+      </h1>
+      <div className="grid grid-cols-2 gap-8 px-6">
+        <div className="text-white">
+          <h1 className="text-center pb-6 text-3xl font-semibold">Summary</h1>
+          <p>
+            I'm a frontend web developer specializing in crafting the visual and
+            interactive elements of websites and web applications. I use HTML
+            for structuring content, CSS for styling, and JavaScript for adding
+            functionality. I'm proficient with frameworks and libraries such as
+            React, Angular, and Vue.js, which help me build responsive and
+            dynamic user interfaces. My role involves ensuring cross-browser
+            compatibility, optimizing performance, and working closely with
+            designers and backend developers to create seamless user experiences
+          </p>
+        </div>
+        <div className="text-white">
+          <h1 className="text-center pb-6 text-3xl font-semibold">
+            Educational Qualification
+          </h1>
+          <p className="">
+            <span className="font-bold"> Brac University</span> — B.Sc. in
+            Computer Science & Engineering (CSE).
+          </p>
+          <p className="py-3">
+            <span className="font-bold">Feni Govt. College</span> - Higher
+            Secondary Certificate
+          </p>
+          <p>
+            <span className="font-bold">Fazilpur W.B Quadri High School</span> -
+            Secondary School Certificate
+          </p>
+        </div>
       </div>
     </div>
   );
