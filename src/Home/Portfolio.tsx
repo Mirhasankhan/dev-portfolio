@@ -26,7 +26,7 @@ const Portfolio = () => {
   }, []);
   return (
     <div>
-      <div className="py-12 flex justify-center items-center text-4xl font-bold text-white">
+      <div className="py-12 flex justify-center items-center text-5xl font-bold text-white">
         <div className="arrow ml-4"></div>
         <span className="ml-4">Recent Projects</span>
       </div>

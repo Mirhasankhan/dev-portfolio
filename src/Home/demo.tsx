@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import Banner from "./Banner";
 import About from "./About";
-import Blogs from "./Blogs";
+// import Blogs from "./Blogs";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
@@ -35,7 +35,7 @@ const App = () => {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="blogs"
                   smooth={true}
@@ -44,7 +44,7 @@ const App = () => {
                 >
                   Blogs
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="portfolio"
@@ -93,9 +93,9 @@ const App = () => {
           <div id="skill">
             <Skills></Skills>
           </div>
-          <div id="blogs">
+          {/* <div id="blogs">
             <Blogs></Blogs>
-          </div>
+          </div> */}
 
           <div id="contact">
             <Contact></Contact>

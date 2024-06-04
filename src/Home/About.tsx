@@ -24,9 +24,8 @@ const About = () => {
           </h1>
           <p className="">
             <span className="font-bold">
-              {" "}
               Daffodil International University-DIU
-            </span>{" "}
+            </span>
             — B.Sc. in Computer Science & Engineering (CSE).
           </p>
           <p className="py-3">

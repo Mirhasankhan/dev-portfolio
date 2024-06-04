@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <div className=" mt-24">
       <div className="flex flex-col items-center my-12">
-        <div className="flex items-center text-4xl font-bold text-white">
+        <div className="flex items-center text-5xl font-bold text-white">
           <div className="arrow ml-4"></div>
           <span className="ml-4">My skills</span>
         </div>

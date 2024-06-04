@@ -22,7 +22,7 @@ const Banner = () => {
           <a href="https://www.instagram.com/mirhasan762/?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D&fbclid=IwAR3EuwwUbRqTJMYlvLLG8ws-9TmJuzjT2uLzdET00rF85VhPQngebY97oN0">
             <FaInstagram className="border-2 p-1 rounded-full border-cyan-400" />
           </a>
-          <a href="https://www.linkedin.com/in/mir-hasan-9879a7277/">
+          <a href="https://www.linkedin.com/in/mir-hasan-frontend-dev/">
             <FaLinkedin className="border-2 p-1 rounded-full border-cyan-400" />
           </a>
           <a href="https://github.com/Mirhasankhan">
