@@ -5,6 +5,7 @@ import {
   FaGithub,
   FaPhone,
 } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="flex items-center gap-2">
-            <FaPhone></FaPhone>
+            <IoLogoWhatsapp className=""></IoLogoWhatsapp>
             <h1>+880 1678506798</h1>
           </div>
         </div>

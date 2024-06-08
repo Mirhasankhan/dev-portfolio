@@ -33,9 +33,9 @@ const Banner = () => {
           <DownloadResume></DownloadResume>
         </div>
       </div>
-      <div>
+      <div className="">
         <img
-          className="h-[400px] w-[400px] rounded-full"
+          className="h-[400px] w-[400px] rounded-full border-2 border-cyan-400 p-2"
           src={profieImg}
           alt=""
         />

@@ -47,41 +47,57 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-4">
-      {blogs?.map((b: TBlog) => (
-        <div className="text-white border p-2 rounded-md" key={b._id}>
-          <img className="w-full rounded-md h-64" src={b.image} alt="" />
-          <h1 className="py-3 text-xl text-blue-400">{b.blogName}</h1>
-          {renderContent(b.content)}
-          {b.content.length > 100 && !isExpanded && (
-            <button className="text-blue-500" onClick={() => openModal(b)}>
-              Read Full Blog
-            </button>
-          )}
-        </div>
-      ))}
+    <div>
+      <h1 className="text-3xl text-white pb-6 pt-12">Blogs</h1>
+      <div className="grid grid-cols-4 gap-4">
+        {blogs?.map((b: TBlog) => (
+          <div
+            className="flex flex-col items-start text-white border p-2 rounded-md"
+            key={b._id}
+          >
+            <img className="w-full rounded-md h-48" src={b.image} alt="" />
+            <h1 className="py-3 text-xl text-cyan-400">{b.blogName}</h1>
+            {renderContent(b.content)}
+            {b.content.length > 100 && !isExpanded && (
+              <button
+                className="text-cyan-500 mt-auto"
+                onClick={() => openModal(b)}
+              >
+                Read Full Blog
+              </button>
+            )}
+          </div>
+        ))}
 
-      <dialog id="my_modal_3" className="modal text-black">
-        <div className="modal-box">
-          <form method="dialog">
-            <button
-              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-              onClick={closeModal}
-            >
-              ✕
-            </button>
-          </form>
-          {selectedBlog && (
-            <>
-              <h3 className="font-bold text-lg">{selectedBlog.blogName}</h3>
-              <p
-                className="py-4"
-                dangerouslySetInnerHTML={{ __html: selectedBlog.content }}
-              ></p>
-            </>
-          )}
-        </div>
-      </dialog>
+        <dialog id="my_modal_3" className="modal text-black">
+          <div className="modal-box">
+            <form method="dialog">
+              <button
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                onClick={closeModal}
+              >
+                ✕
+              </button>
+            </form>
+            {selectedBlog && (
+              <>
+                <img
+                  className="w-full rounded-md p-4 border-2"
+                  src={selectedBlog.image}
+                  alt=""
+                />
+                <h3 className="font-bold text-2xl pt-3">
+                  {selectedBlog.blogName}
+                </h3>
+                <p
+                  className="py-4"
+                  dangerouslySetInnerHTML={{ __html: selectedBlog.content }}
+                ></p>
+              </>
+            )}
+          </div>
+        </dialog>
+      </div>
     </div>
   );
 };

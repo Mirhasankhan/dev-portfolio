@@ -24,8 +24,8 @@ const Skills = () => {
   }, []);
   return (
     <div className=" mt-24">
-      <div className="flex flex-col items-center my-12">
-        <div className="flex items-center text-5xl font-bold text-white">
+      <div className="flex flex-col items-start my-12">
+        <div className="flex items-center text-3xl font-bold text-white">
           <div className="arrow ml-4"></div>
           <span className="ml-4">My skills</span>
         </div>
@@ -36,7 +36,7 @@ const Skills = () => {
             {skills?.map((skill: TSkill) => (
               <div className="flex flex-col items-center gap-3">
                 <img
-                  className="rounded-full h-40 w-40"
+                  className="rounded-full h-40 w-40 mr-6"
                   src={skill.image}
                   alt=""
                 />
