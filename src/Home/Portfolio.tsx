@@ -18,6 +18,10 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     fetch("https://portfolio-server-rosy-mu.vercel.app/api/v1/projects")
       .then((res) => res.json())
       .then((data) => {
@@ -34,7 +38,7 @@ const Portfolio = () => {
       {projects?.map((project: TProject) => (
         <div
           key={project._id}
-          className="rounded-md bg-black text-white mb-6 bg-opacity-40 py-12 px-3 hover:bg-opacity-50"
+          className=" rounded-md bg-black text-white mb-6 bg-opacity-40 py-12 px-3 hover:bg-opacity-50"
         >
           <div className="grid grid-cols-2 gap-6 min-h-64">
             <div>
@@ -73,7 +77,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div>
-              <FullPageScroll pageLInk={project.liveLink}></FullPageScroll>
+              <FullPageScroll pageSS={project.features}></FullPageScroll>
             </div>
           </div>
         </div>

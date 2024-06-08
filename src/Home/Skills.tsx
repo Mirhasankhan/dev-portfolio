@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../App.css";
+import Marquee from "react-fast-marquee";
 
 type TSkill = {
   _id: string;
@@ -9,7 +10,11 @@ type TSkill = {
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  console.log(skills);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     fetch("https://portfolio-server-rosy-mu.vercel.app/api/v1/skills")
       .then((res) => res.json())
@@ -25,21 +30,21 @@ const Skills = () => {
           <span className="ml-4">My skills</span>
         </div>
       </div>
-      <div
-        className="grid grid-cols-4 gap-8 "
-        data-aos="fade-right"
-        data-aos-duration="1500"
-      >
-        {skills?.map((skill: TSkill) => (
-          <div key={skill._id} className="flex flex-col items-center">
-            <img
-              className="w-32 h-32 rounded-full mb-6"
-              src={skill.image}
-              alt=""
-            />
-            <p className="text-white">{skill.skillName}</p>
+      <div>
+        <Marquee direction="right" pauseOnHover>
+          <div className="flex gap-12">
+            {skills?.map((skill: TSkill) => (
+              <div className="flex flex-col items-center gap-3">
+                <img
+                  className="rounded-full h-40 w-40"
+                  src={skill.image}
+                  alt=""
+                />
+                <p className="text-white">{skill.skillName}</p>
+              </div>
+            ))}
           </div>
-        ))}
+        </Marquee>
       </div>
     </div>
   );

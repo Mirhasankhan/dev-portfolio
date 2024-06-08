@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import Banner from "./Banner";
 import About from "./About";
-// import Blogs from "./Blogs";
+import Blogs from "./Blogs";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
@@ -12,7 +12,7 @@ const App = () => {
     <>
       <div>
         <div className="bg-black bg-opacity-40 flex justify-between items-center border p-2 px-5 rounded-full text-white">
-          <h1 className="font-extrabold text-2xl">Mir Hasan</h1>
+          <h1 className="font-extrabold text-3xl">Mir Hasan</h1>
           <div>
             <ul className="p-4 flex w-full h-full gap-6  font-medium">
               <li>
@@ -35,7 +35,7 @@ const App = () => {
                   About
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   to="blogs"
                   smooth={true}
@@ -44,7 +44,7 @@ const App = () => {
                 >
                   Blogs
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link
                   to="portfolio"
@@ -86,16 +86,17 @@ const App = () => {
           <div id="about">
             <About></About>
           </div>
+          <div id="skill">
+            <Skills></Skills>
+          </div>
 
           <div id="portfolio">
             <Portfolio></Portfolio>
           </div>
-          <div id="skill">
-            <Skills></Skills>
-          </div>
-          {/* <div id="blogs">
+
+          <div id="blogs">
             <Blogs></Blogs>
-          </div> */}
+          </div>
 
           <div id="contact">
             <Contact></Contact>
