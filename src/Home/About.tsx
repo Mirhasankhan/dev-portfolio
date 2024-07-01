@@ -20,21 +20,17 @@ const About = () => {
         </div>
         <div className="text-white">
           <h1 className="text-center pb-6 text-3xl font-semibold">
-            Educational Qualification
+            Professional Courses
           </h1>
           <p className="">
             <span className="font-bold">
-              Daffodil International University-DIU
+              Programming Hero Web Development Course
             </span>
-            — B.Sc. in Computer Science & Engineering (CSE).
+            — Programming Hero
           </p>
           <p className="py-3">
-            <span className="font-bold">Feni Govt. College</span> - Higher
-            Secondary Certificate
-          </p>
-          <p>
-            <span className="font-bold">Fazilpur W.B Quadri High School</span> -
-            Secondary School Certificate
+            <span className="font-bold">Next Level Web Development</span> -
+            Programming Hero
           </p>
         </div>
       </div>

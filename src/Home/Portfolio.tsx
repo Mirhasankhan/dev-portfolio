@@ -35,53 +35,56 @@ const Portfolio = () => {
         <span className="ml-4">Recent Projects</span>
       </div>
 
-      {projects?.map((project: TProject) => (
-        <div
-          key={project._id}
-          className=" rounded-md border-2 border-cyan-400 bg-black text-white mb-6 bg-opacity-40 py-6 px-3 hover:bg-opacity-50"
-        >
-          <div className="grid grid-cols-2 gap-6 min-h-64">
-            <div>
-              <h1 className="text-center text-2xl py-2">
-                {project.projectName}
-              </h1>
-              <p>{project.description}</p>
-              <div className="flex justify-evenly mt-6">
-                <a
-                  className="
+      {projects
+        ?.slice()
+        .reverse()
+        .map((project: TProject) => (
+          <div
+            key={project._id}
+            className=" rounded-md border-2 border-cyan-400 bg-black text-white mb-6 bg-opacity-40 py-6 px-3 hover:bg-opacity-50"
+          >
+            <div className="grid grid-cols-2 gap-6 min-h-64">
+              <div>
+                <h1 className="text-center text-2xl py-2">
+                  {project.projectName}
+                </h1>
+                <p>{project.description}</p>
+                <div className="flex justify-evenly mt-6">
+                  <a
+                    className="
               flex gap-2 items-center"
-                  target="_blank"
-                  href={project.liveLink}
-                >
-                  <FaChrome className="text-xl"></FaChrome>
-                  <p>Live Link</p>
-                </a>
-                <a
-                  className="
+                    target="_blank"
+                    href={project.liveLink}
+                  >
+                    <FaChrome className="text-xl"></FaChrome>
+                    <p>Live Link</p>
+                  </a>
+                  <a
+                    className="
               flex gap-2 items-center"
-                  target="_blank"
-                  href={project.clientLink}
-                >
-                  <FaGithub className="text-xl"></FaGithub>
-                  <p>Client Link</p>
-                </a>
-                <a
-                  className="
+                    target="_blank"
+                    href={project.clientLink}
+                  >
+                    <FaGithub className="text-xl"></FaGithub>
+                    <p>Client Link</p>
+                  </a>
+                  <a
+                    className="
               flex gap-2 items-center"
-                  target="_blank"
-                  href={project.serverLink}
-                >
-                  <FaGithub className="text-xl"></FaGithub>
-                  <p>Github Server</p>
-                </a>
+                    target="_blank"
+                    href={project.serverLink}
+                  >
+                    <FaGithub className="text-xl"></FaGithub>
+                    <p>Github Server</p>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <FullPageScroll pageSS={project.features}></FullPageScroll>
               </div>
             </div>
-            <div>
-              <FullPageScroll pageSS={project.features}></FullPageScroll>
-            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 };
