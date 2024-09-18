@@ -4,7 +4,7 @@ import DownloadResume from "../components/DownloadResume";
 
 const Banner = () => {
   return (
-    <div className="text-white grid grid-cols-2 gap-5 my-24 px-6">
+    <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-5 my-24 px-6">
       <div className="mt-5">
         <h1 className="text-2xl font-semibold">Hello, I'm</h1>
         <h1 className="text-7xl bold py-4">Mir Hasan</h1>

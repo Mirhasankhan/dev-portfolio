@@ -49,7 +49,7 @@ const Blogs = () => {
   return (
     <div>
       <h1 className="text-3xl text-white pb-6 pt-12">Blogs</h1>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {blogs?.map((b: TBlog) => (
           <div
             className="flex flex-col items-start text-white border p-2 rounded-md"

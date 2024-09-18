@@ -4,7 +4,7 @@ const About = () => {
       <h1 className="text-5xl text-white pb-6 font-bold text-center">
         About Me
       </h1>
-      <div className="grid grid-cols-2 gap-8 px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
         <div className="text-white">
           <h1 className="text-center pb-6 text-3xl font-semibold">Summary</h1>
           <p>
