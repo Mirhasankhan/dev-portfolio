@@ -41,11 +41,11 @@ const Portfolio = () => {
         .map((project: TProject) => (
           <div
             key={project._id}
-            className=" rounded-md border-2 border-cyan-400 bg-black text-white mb-6 bg-opacity-40 py-6 px-3 hover:bg-opacity-50"
+            className=" rounded-md border-2 border-cyan-400 bg-gray-500 text-white mb-6 bg-opacity-40 py-6 px-3 hover:bg-opacity-50"
           >
             <div className="grid grid-cols-2 gap-6 min-h-64">
               <div>
-                <h1 className="text-center text-2xl py-2">
+                <h1 className="text-center text-2xl py-2 text-cyan-400">
                   {project.projectName}
                 </h1>
                 <p>{project.description}</p>
