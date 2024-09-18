@@ -53,11 +53,13 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <Lottie
-          className="h-[450px] w-full sm:h-64 sm:w-96" // Responsive height and width
-          animationData={contactUs}
-          loop={true}
-        />
+        <div className="hidden md:block">
+          <Lottie
+            style={{ height: "400px", width: "600px" }}
+            animationData={contactUs}
+            loop={true}
+          />
+        </div>
       </div>
     </div>
   );

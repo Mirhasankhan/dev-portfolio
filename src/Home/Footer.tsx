@@ -9,7 +9,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center border-t bg-gray-300">
+    <div className="flex flex-col items-center border-t bg-gray-300 px-3">
       <div className="flex text-5xl justify-start gap-8 mt-6 ">
         <a href="https://www.facebook.com/mir.hasan.794/">
           <FaFacebook className="border-2 p-1 rounded-full border-cyan-400" />
