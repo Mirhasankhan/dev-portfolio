@@ -47,8 +47,18 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-3xl text-white pb-6 pt-12">Blogs</h1>
+    <div className="px-4">
+      <div
+        className="text-center py-12 text-white"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
+        <h1 className="ml-4 text-4xl font-bold">Recent Blogs</h1>
+        <p className="text-orange-400 pt-2">
+          put your ideas and thus your wishes in the form of a unique web <br />{" "}
+          project that inspire you and your customers
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {blogs?.map((b: TBlog) => (
           <div

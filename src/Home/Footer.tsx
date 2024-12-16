@@ -1,5 +1,5 @@
 import {
-  FaFacebook,
+  FaFacebookF,
   FaLinkedin,
   FaInstagram,
   FaGithub,
@@ -9,22 +9,22 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center border-t bg-gray-300 px-3">
-      <div className="flex text-5xl justify-start gap-8 mt-6 ">
+    <div className="flex flex-col items-center  bg-[#1c222a] text-white px-3">
+      <div className="flex text-6xl justify-start gap-6 md:gap-8 mt-6">
         <a href="https://www.facebook.com/mir.hasan.794/">
-          <FaFacebook className="border-2 p-1 rounded-full border-orange-400" />
+          <FaFacebookF className="border p-3 hover:bg-orange-400 rounded-full border-orange-400" />
         </a>
         <a href="https://www.instagram.com/mirhasan762/?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D&fbclid=IwAR3EuwwUbRqTJMYlvLLG8ws-9TmJuzjT2uLzdET00rF85VhPQngebY97oN0">
-          <FaInstagram className="border-2 p-1 rounded-full border-orange-400" />
+          <FaInstagram className="border p-3 hover:bg-orange-400 rounded-full border-orange-400" />
         </a>
-        <a href="https://www.linkedin.com/in/mir-hasan-9879a7277/">
-          <FaLinkedin className="border-2 p-1 rounded-full border-orange-400" />
+        <a href="https://www.linkedin.com/in/mir-hasan-frontend-dev/">
+          <FaLinkedin className="border p-3 hover:bg-orange-400 rounded-full border-orange-400" />
         </a>
         <a href="https://github.com/Mirhasankhan">
-          <FaGithub className="border-2 p-1 rounded-full border-orange-400" />
+          <FaGithub className="border p-3 hover:bg-orange-400 rounded-full border-orange-400" />
         </a>
       </div>
-      <div className="flex gap-6 items-center mt-4 mb-4 ">
+      <div className="md:flex gap-6 items-center mt-4 mb-4 ">
         <div className="flex items-center gap-2">
           <FaPhone></FaPhone>
           <h1>+880 1839033505</h1>

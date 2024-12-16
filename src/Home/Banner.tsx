@@ -17,14 +17,17 @@ const Banner = () => {
   return (
     <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-5 my-6 md:my-16 px-6">
       <div className="mt-5">
-        <h1 className="text-5xl font-semibold">Hello, I'm Mir Hasan</h1>
+        <h1 className="text-2xl md:text-5xl font-semibold">
+          Hello, I'm Mir Hasan
+        </h1>
         <p className="text-3xl pt-3 font-semibold">
           I'm a <span className="text-orange-400 ">{roles[currentIndex]}</span>
         </p>
         <p className="pt-3">
-          I specialize in creating dynamic web applications, with a robust foundation in both front-end and back-end development
+          I specialize in creating dynamic web applications, with a robust
+          foundation in both front-end and back-end development
         </p>
-        <div className="flex text-6xl justify-start gap-8 mt-6">
+        <div className="flex text-6xl justify-start gap-6 md:gap-8 mt-6">
           <a href="https://www.facebook.com/mir.hasan.794/">
             <FaFacebookF className="border p-3 hover:bg-orange-400 rounded-full border-orange-400" />
           </a>
@@ -49,7 +52,7 @@ const Banner = () => {
       </div>
       <div className="ml-auto relative">
         <img
-          className="h-84 md:h-[400px] w-full md:w-[400px] rounded-full border-2 border-orange-400"
+          className=" md:h-[400px] w-full md:w-[400px] rounded-full border-2 border-orange-400"
           src={profieImg}
           alt=""
         />

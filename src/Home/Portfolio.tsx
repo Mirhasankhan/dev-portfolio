@@ -33,7 +33,7 @@ const Portfolio = () => {
         data-aos="zoom-in"
         data-aos-duration="2000"
       >
-        <h1 className="ml-4 text-4xl font-bold">My Projects</h1>
+        <h1 className="ml-4 md:text-5xl text-2xl font-bold">My Projects</h1>
         <p className="text-orange-400 pt-2">
           My recent projects involve creating dynamic web applications using
           modern frameworks. These <br /> projects showcasing my ability to
@@ -41,16 +41,13 @@ const Portfolio = () => {
         </p>
       </div>
       <div
-        className="grid grid-cols-3 gap-6"
+        className="grid grid-cols-1 px-4 md:grid-cols-3 gap-6"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        {projects
-          ?.slice()
-          .reverse()
-          .map((project: TProject) => (
-            <Project details={project}></Project>
-          ))}
+        {projects?.map((project: TProject) => (
+          <Project key={project._id} details={project}></Project>
+        ))}
       </div>
     </div>
   );
