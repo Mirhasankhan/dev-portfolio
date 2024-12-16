@@ -3,6 +3,7 @@ import { FaChrome } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import FullPageScroll from "../components/PageScroll";
 import "../App.css";
+import Project from "../components/Project";
 
 type TProject = {
   clientLink: string;
@@ -30,61 +31,18 @@ const Portfolio = () => {
   }, []);
   return (
     <div>
-      <div className="py-12 flex justify-start items-center text-3xl font-bold text-white">
-        <div className="arrow ml-4"></div>
-        <span className="ml-4">Recent Projects</span>
+      <div className="text-center py-12 text-white" data-aos="zoom-in" data-aos-duration="2000">
+        <h1 className="ml-4 text-4xl font-bold">My Projects</h1>
+        <p className="text-orange-400 pt-2">My recent projects involve creating dynamic web applications using modern frameworks. These <br /> projects showcasing my ability to deliver robust and user-friendly solutions.</p>
       </div>
-
-      {projects
-        ?.slice()
-        .reverse()
-        .map((project: TProject) => (
-          <div
-            key={project._id}
-            className=" rounded-md border-2 border-cyan-400 bg-gray-500 text-white mb-6 bg-opacity-40 py-6 px-3 hover:bg-opacity-50"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-64">
-              <div>
-                <h1 className="text-center text-2xl py-2 text-cyan-400">
-                  {project.projectName}
-                </h1>
-                <p>{project.description}</p>
-                <div className="flex justify-evenly mt-6">
-                  <a
-                    className="
-              flex gap-2 items-center"
-                    target="_blank"
-                    href={project.liveLink}
-                  >
-                    <FaChrome className="text-xl"></FaChrome>
-                    <p>Live Link</p>
-                  </a>
-                  <a
-                    className="
-              flex gap-2 items-center"
-                    target="_blank"
-                    href={project.clientLink}
-                  >
-                    <FaGithub className="text-xl"></FaGithub>
-                    <p>Client Link</p>
-                  </a>
-                  <a
-                    className="
-              flex gap-2 items-center"
-                    target="_blank"
-                    href={project.serverLink}
-                  >
-                    <FaGithub className="text-xl"></FaGithub>
-                    <p>Github Server</p>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <FullPageScroll pageSS={project.features}></FullPageScroll>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="grid grid-cols-3 gap-6" data-aos="fade-up" data-aos-duration="1000">
+        {projects
+          ?.slice()
+          .reverse()
+          .map((project: TProject) => (
+            <Project details={project}></Project>
+          ))}
+      </div>
     </div>
   );
 };

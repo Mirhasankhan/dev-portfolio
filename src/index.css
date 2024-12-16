@@ -9,8 +9,8 @@ body {
 }
 
 .link-logo {
-  @apply font-semibold py-2 hover:text-cyan-400 cursor-pointer;
+  @apply font-semibold py-2 hover:text-orange-400 cursor-pointer;
 }
 .custom-button {
-  @apply font-medium text-black py-2 px-6 rounded-full hover:bg-transparent hover:text-white bg-cyan-400 border border-cyan-400;
+  @apply font-semibold text-white py-2 px-6 rounded-full hover:bg-transparent  bg-orange-400 border border-orange-400;
 }

@@ -10,7 +10,7 @@ const DownloadResume = () => {
 
   return (
     <button className="custom-button" onClick={handleDownload}>
-      WATCH RESUME
+      Download Resume
     </button>
   );
 };

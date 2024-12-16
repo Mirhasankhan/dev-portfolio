@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "../App.css";
 
+
 const FullPageScroll = ({ pageSS }: { pageSS: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import Marquee from "react-fast-marquee";
+import Skill from "../components/Skill";
+
 
 type TSkill = {
   _id: string;
@@ -10,6 +11,7 @@ type TSkill = {
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
+  const [active, setActive] = useState('front')
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,30 +24,55 @@ const Skills = () => {
         setSkills(data);
       });
   }, []);
+
+
   return (
-    <div className=" mt-24">
-      <div className="flex flex-col items-start my-12">
-        <div className="flex items-center text-3xl font-bold text-white">
-          <div className="arrow ml-4"></div>
-          <span className="ml-4">My skills</span>
+    <div className="mt-16" data-aos="fade-right"  data-aos-duration="2000">
+
+      <p className="text-center pb-12 text-6xl font-semibold text-white">
+        My skills
+      </p>
+
+      <div className="pb-6">
+        <div className="flex justify-center gap-6 text-white pb-6 text-xl">
+          <h1 onClick={() => setActive("front")} className={`cursor-pointer px-5 py-1 rounded-full ${active === "front" ? "border border-orange-400" : ""
+            }`}>Front End</h1>
+          <h1 onClick={() => setActive("back")} className={`cursor-pointer px-5 py-1 rounded-full ${active === "back" ? "border border-orange-400" : ""
+            }`}>Back End</h1>
+          <h1 onClick={() => setActive("tools")} className={`cursor-pointer px-5 py-1 rounded-full ${active === "tools" ? "border border-orange-400" : ""
+            }`}>Tools</h1>
+        </div>
+        <div>
+          {
+            active == "front" && <div>
+              <div className="grid grid-cols-6 gap-4">
+                {skills?.map((skill: TSkill) => (
+                  <Skill data={skill}></Skill>
+                ))}
+              </div>
+            </div>
+          }
+          {
+            active == "back" && <div>
+              <div className="grid grid-cols-6 gap-4">
+                {skills?.slice(0, 3).map((skill: TSkill) => (
+                  <Skill data={skill}></Skill>
+                ))}
+              </div>
+            </div>
+          }
+          {
+            active == "tools" && <div>
+              <div className="grid grid-cols-6 gap-4">
+              {skills?.slice(0, 6).map((skill: TSkill) => (
+                  <Skill data={skill}></Skill>
+                ))}
+              </div>
+            </div>
+          }
         </div>
       </div>
-      <div>
-        <Marquee direction="right" pauseOnHover>
-          <div className="flex gap-12">
-            {skills?.map((skill: TSkill) => (
-              <div className="flex flex-col items-center gap-3">
-                <img
-                  className="rounded-full h-40 w-40 mr-6"
-                  src={skill.image}
-                  alt=""
-                />
-                <p className="text-white">{skill.skillName}</p>
-              </div>
-            ))}
-          </div>
-        </Marquee>
-      </div>
+
     </div>
   );
 };

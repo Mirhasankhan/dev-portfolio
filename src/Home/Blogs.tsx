@@ -56,7 +56,7 @@ const Blogs = () => {
             key={b._id}
           >
             <img className="w-full rounded-md h-48" src={b.image} alt="" />
-            <h1 className="py-3 text-xl text-cyan-400">{b.blogName}</h1>
+            <h1 className="py-3 text-xl text-orange-400">{b.blogName}</h1>
             {renderContent(b.content)}
             {b.content.length > 100 && !isExpanded && (
               <button
