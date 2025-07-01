@@ -2,7 +2,7 @@ const DownloadResume = () => {
   const handleDownload = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href =
-      "https://drive.google.com/file/d/11RmMFHUQVidKZbAqCFgpM2qxJzf9hUhb/view?usp=sharing";
+      "https://drive.google.com/file/d/12eZbrdNq-z3frpoceNkHJaGB0lzzLPeD/view?usp=sharing";
     downloadLink.download = "MirHasanresume.pdf";
 
     downloadLink.click();
